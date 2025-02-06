@@ -26,6 +26,31 @@ img {
 }
 
 
+/* Estilos generales del header */
+.header-content {
+    text-align: center;
+    padding: 20px;
+}
+
+/* Aumentar tamaño del texto en móviles */
+@media (max-width: 480px) {
+    .header-content p {
+        font-size: 1.4rem; /* Hace el texto más grande */
+    }
+
+    .header-content nav ul {
+        display: flex;
+        flex-direction: column; /* Asegura que los enlaces no queden muy pegados */
+        gap: 10px; /* Espaciado entre los enlaces */
+    }
+
+    .header-content nav ul li a {
+        font-size: 1.2rem; /* Aumenta el tamaño de los enlaces de navegación */
+    }
+}
+
+
+
 
 @media (max-width: 768px) {
     .header-content {
@@ -114,10 +139,10 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 10 20px;  
-    margin-top: 10px; 
+    padding: 20px 20px;  
+    margin-top: 15px; 
     max-height: 90px;
-    position: relative;
+    position: relative; 
     z-index: 2;
 }
 
@@ -136,8 +161,8 @@ body {
 
 nav ul {
     list-style: none;
-    margin: 0;
-    padding: 0;
+    margin: 80px;
+    padding:-10px;
     display: flex;
     gap: 20px;
 }
@@ -198,9 +223,9 @@ nav ul li a:hover {
 .header-content p {
     position: relative; /* Permite moverlo sin afectar otros elementos */
     margin-top: 50px; /* Ajusta la separación respecto al logo */
-    max-width: 400px; /* Controla el ancho para dividirse en dos líneas */
+    max-width: 200px; /* Controla el ancho para dividirse en dos líneas */
     text-align: center; /* Centra el texto si lo deseas */
-    font-size: 1.2rem; /* Ajusta el tamaño de letra */
+    font-size: 1.6rem; /* Ajusta el tamaño de letra */
     line-height: 1.5; /* Mejora la separación entre líneas */
 }
 
@@ -250,6 +275,9 @@ nav ul li a:hover {
 }
 
 
+
+
+
 .servicio-card {
     background-color: #fff;
     border-radius: 30px;
@@ -271,18 +299,41 @@ nav ul li a:hover {
     object-fit: cover;
 }
 
-.servicio-card h3, 
+
+
+/* Estilos específicos para el título (h3) */
+.servicio-card h3 {
+    font-size: 1rem;
+    margin: 15px 0 10px;
+    color: #0e0a0a; /* Color oscuro */
+    text-align: center;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+    max-width: 100%;
+    white-space: normal;
+    font-weight: bold; /* Mantiene solo el título en negrita */
+}
+
+/* Estilos para los párrafos (p) */
 .servicio-card p {
     font-size: 1rem;
     margin: 15px 0 10px;
-    color: #0e0a0a;
-    font-weight: bold;
+    color: #555; /* Color gris oscuro para diferenciar del título */
     text-align: center;
-    word-wrap: break-word; /* Divide las palabras largas */
-    overflow-wrap: break-word; /* Asegura que el texto no sobresalga */
-    max-width: 100%; /* Evita que el texto se desborde */
-    white-space: normal; /* Permite que el texto haga saltos de línea */
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+    max-width: 100%;
+    white-space: normal;
+    font-weight: normal; /* Asegura que los párrafos no estén en negrita */
 }
+
+/* Aplica negrita solo a los nombres de los servicios */
+.servicio-card p strong {
+    font-weight: bold;
+    color: #0e0a0a; /* Mantiene el mismo color oscuro del título */
+}
+
+
 
 /* Media query para celulares */
 @media (max-width: 480px) {
@@ -499,7 +550,7 @@ footer {
 /* Estilos base */
 body {
     font-family: Arial, sans-serif;
-    margin: 0;
+    margin: 10px;
     padding: 0;
     font-size: 16px;
 }
@@ -530,7 +581,7 @@ h1, h2, h3, p {
     }
 
     .logo {
-        width: 150px;
+        width: 330px;
     }
 }
 
@@ -544,12 +595,12 @@ header {
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding: 20px;
+    padding: 38px;
 }
 
 .logo img {
     width: 100px; /* Tamaño base del logo */
-}
+}   
 
 .frase p {
     font-size: 1.2rem; /* Tamaño base de la frase */
@@ -558,7 +609,7 @@ header {
 
 nav ul {
     list-style: none;
-    padding: 0;
+    padding: 100px;
     display: flex;
     gap: 20px;
 }
@@ -566,7 +617,7 @@ nav ul {
 nav a {
     text-decoration: none;
     color: #000;
-    font-size: 1rem; /* Tamaño base de los enlaces */
+    font-size: 1.9rem; /* Tamaño base de los enlaces */
 }
 
 /* Estilos para móviles */
