@@ -38,7 +38,7 @@ img {
     }
 
     .logo {
-        width: 150px; /* Reduce el tamaño del logo en pantallas pequeñas */
+        width: 300px; /* Reduce el tamaño del logo en pantallas pequeñas */
     }
 
     .social-media {
@@ -52,6 +52,51 @@ img {
         overflow: hidden; /* Evita que las imágenes del carrusel se desborden */
     }
 }
+
+
+
+@media screen and (max-width: 768px) { /* Para celulares y tablets */
+    .servicio-card {
+        max-width: 90%; /* Asegura que el ancho no sea demasiado grande */
+        padding: 10px;
+    }
+
+    .servicio-card h3 {
+        font-size: 1rem; /* Reduce el tamaño del título */
+        text-align: center; /* Centra el texto */
+        word-wrap: break-word;
+        overflow-wrap: break-word;
+        padding: 5px;
+    }
+
+    .servicio-card p {
+        font-size: 0.9rem; /* Reduce el tamaño del texto */
+        text-align: center; 
+        padding: 5px;
+    }
+}
+
+
+@media screen and (max-width: 768px) { 
+    header .header-content p {
+        font-size: 1.2rem; /* Aumenta el tamaño del texto */
+        text-align: center;
+    }
+
+    header nav ul li a {
+        font-size: 1.1rem; /* Aumenta el tamaño de los enlaces del menú */
+    }
+}
+
+
+@media screen and (max-width: 768px) { 
+    .logo {
+        width: 180px;  /* Ajusta el tamaño del logo */
+        height: auto;
+    }
+}
+
+
 
 
 
@@ -242,6 +287,7 @@ nav ul li a:hover {
     color: #0e0a0a; /* Color del texto */
     font-weight: bold; /* Negrita opcional */
     text-align: center; /* Centrar el texto */
+    white-space: normal;
 }
 
 
